@@ -8,7 +8,7 @@ A technical deep-dive into the engineering discipline behind the Rego guardrail 
 
 ## Read the White Paper
 
-👉 [View White Paper](https://krunalpatel1107.github.io/Guardrails-as-Code/whitepaper)
+👉 [View White Paper](https://krunalpatel1107.github.io/guardrails-as-code-for-ai-security-programs/whitepaper)
 
 ## About
 
