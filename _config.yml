@@ -1,0 +1,9 @@
+title: "Guardrails-as-Code for AI Security Programs"
+description: "Earning the safety claim the Maker–Checker architecture makes — the engineering discipline behind the Rego guardrail library that backs AI-orchestrated security automation"
+author: Krunal Patel
+
+url: "https://krunalpatel1107.github.io"
+baseurl: "/guardrails-as-code-for-ai-security-programs"
+
+markdown: kramdown
+highlighter: rouge

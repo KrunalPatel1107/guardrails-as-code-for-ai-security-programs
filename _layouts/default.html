@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="author" content="{{ site.author }}" />
+
+  <!-- Open Graph for LinkedIn sharing -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/hero.png" />
+  <meta property="og:image:width" content="2600" />
+  <meta property="og:image:height" content="1451" />
+
+  <style>
+    /* Reset & base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+
+    /* Layout */
+    .page-wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 96px;
+    }
+
+    /* Typography */
+    h1 { font-size: 2rem;   font-weight: 700; line-height: 1.2; margin: 2rem 0 0.5rem; color: #0f1923; }
+    h2 { font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin: 2.5rem 0 0.75rem; color: #0f1923; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.35rem; }
+    h3 { font-size: 1.15rem; font-weight: 600; margin: 2rem 0 0.5rem; color: #1e3a5f; }
+    h4 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.4rem; color: #1e3a5f; }
+
+    p  { margin: 0.9rem 0; }
+    em { font-style: italic; color: #555; }
+
+    a { color: #1e6fbf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Lists */
+    ul, ol { margin: 0.75rem 0 0.75rem 1.5rem; }
+    li { margin: 0.35rem 0; }
+
+    /* Blockquote — used for callout boxes */
+    blockquote {
+      border-left: 4px solid #1e6fbf;
+      background: #f0f6ff;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    blockquote p { margin: 0.4rem 0; color: #1a3050; }
+    blockquote strong { color: #1e3a5f; }
+
+    /* Code blocks */
+    pre {
+      background: #f5f7fa;
+      border: 1px solid #dde1e7;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875em;
+      background: #f0f2f5;
+      padding: 0.15em 0.4em;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: inherit;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #1e3a5f;
+      color: #ffffff;
+      padding: 0.6rem 0.9rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    td {
+      padding: 0.55rem 0.9rem;
+      border-bottom: 1px solid #e5e7eb;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #f8fafc; }
+    tr:hover td { background: #eef4fb; }
+
+    /* Horizontal rule */
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 2.5rem 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .page-wrapper { padding: 32px 20px 64px; }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.25rem; }
+      pre { font-size: 0.75rem; }
+      table { font-size: 0.8rem; }
+    }
+
+    /* Hero image */
+    .page-wrapper img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1.5rem 0 2rem;
+    }
+
+    /* Print */
+    @media print {
+      body { font-size: 12pt; }
+      pre, blockquote { break-inside: avoid; }
+      h2, h3 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    {{ content }}
+  </div>
+</body>
+</html>
